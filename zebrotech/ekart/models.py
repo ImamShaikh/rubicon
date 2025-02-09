@@ -6,4 +6,10 @@ class product(models.Model):
     desc = models.TextField()
     price = models.IntegerField()
     quantity = models.IntegerField()
+    image = models.ImageField(upload_to="post_images/", null=True)
+
+    def __str__(self):
+        return self.name
+        
+
     

@@ -6,7 +6,7 @@ from .forms import productForm
 def home(request):
     data = product.objects.all()
     request.method == 'POST'
-    form = productForm(request.POST)
+    form = productForm(request.POST,request.FILES)
     if form.is_valid():
          form.save()
          form = productForm()
